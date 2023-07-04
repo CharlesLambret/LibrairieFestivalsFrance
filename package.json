@@ -1,7 +1,7 @@
 {
   "type": "module",
   "name": "librairiefestivalsfrancais",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Mini librairie permettant d'appeler et de filtrer les festivals en fonction de plusieurs paramètres (région, domaine, département, mois de début, mots clés)  ",
   "main": "festivals.mjs",
   "scripts": {
