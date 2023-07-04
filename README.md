@@ -13,16 +13,16 @@ npm install librairiefestivalsfrancais
 Once installed, you can import the library's functions into your code. Here is an example of how to use the different available functions:
 
 ```
-import {
-  fetchFestivalsData,
-  filterByRegion,
-  filterByDomain,
-  filterByDepartement,
-  filterByMoisDebut,
-  filterByKeyWords,
-  filterByPeriodicite
-} from 'librairiefestivalsfrancais';
-
+const {
+    fetchFestivalsData,
+    filterByRegion,
+    filterByDomain,
+    filterByDepartement,
+    filterByMoisDebut,
+    filterByKeyWords,
+    filterByPeriodicite
+  } = require('librairiefestivalsfrancais');
+  
 // Retrieve data for all festivals
 fetchFestivalsData()
   .then((festivalsData) => {
