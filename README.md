@@ -21,7 +21,7 @@ import {
   filterByMoisDebut,
   filterByKeyWords,
   filterByPeriodicite
-} from 'panorama-des-festivals-api';
+} from 'librairiefestivalsfrancais';
 
 // Retrieve data for all festivals
 fetchFestivalsData()
