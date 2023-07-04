@@ -1,16 +1,16 @@
-# Librairie des Festivals en France
+# Library of Festivals in France
 
-La bibliothèque Panorama des Festivals est un ensemble de fonctions permettant de récupérer et de filtrer les données des festivals à partir de l'API Panorama des Festivals du Ministère de la Culture en France. Cette API fournit des informations détaillées sur les festivals tels que leur localisation, leur domaine, leur région, leur périodicité, etc.
+The Panorama des Festivals library is a set of functions that allows you to retrieve and filter festival data from the Panorama des Festivals API provided by the French Ministry of Culture. This API provides detailed information about festivals, such as their location, domain, region, periodicity, etc.
 
 ## Installation
-Pour utiliser cette bibliothèque dans votre projet, vous pouvez l'installer via npm en exécutant la commande suivante :
+To use this library in your project, you can install it via npm by executing the following command:
 
 ```
 npm install librairiefestivalsfrancais
 ```
 
-## Utilisation
-Une fois installée, vous pouvez importer les fonctions de la bibliothèque dans votre code. Voici un exemple d'utilisation des différentes utilisations disponibles :
+## Usage
+Once installed, you can import the library's functions into your code. Here is an example of how to use the different available functions:
 
 ```
 import {
@@ -23,37 +23,37 @@ import {
   filterByPeriodicite
 } from 'panorama-des-festivals-api';
 
-// Récupérer les données de tous les festivals
+// Retrieve data for all festivals
 fetchFestivalsData()
   .then((festivalsData) => {
-    console.log('Données récupérées :', festivalsData);
+    console.log('Retrieved data:', festivalsData);
 
-    // Filtrer les festivals par région
+    // Filter festivals by region
     const festivalsInRegion = filterByRegion(festivalsData, 'Bourgogne-Franche-Comté');
-    console.log('Festivals en Bourgogne-Franche-Comté :', festivalsInRegion);
+    console.log('Festivals in Bourgogne-Franche-Comté:', festivalsInRegion);
 
-    // Filtrer les festivals par domaine
-    const danceFestivals = filterByDomain(festivalsData, 'Danse');
-    console.log('Festivals de danse :', danceFestivals);
+    // Filter festivals by domain
+    const danceFestivals = filterByDomain(festivalsData, 'Dance');
+    console.log('Dance festivals:', danceFestivals);
 
-    // Filtrer les festivals par département
+    // Filter festivals by department
     const festivalsInDepartement = filterByDepartement(festivalsData, '21');
-    console.log('Festivals dans le département Côte-d\'Or :', festivalsInDepartement);
+    console.log('Festivals in Côte-d\'Or department:', festivalsInDepartement);
 
-    // Filtrer les festivals par mois de début
-    const festivalsInJanuary = filterByMoisDebut(festivalsData, '01 (janvier)');
-    console.log('Festivals commençant en janvier :', festivalsInJanuary);
+    // Filter festivals by start month
+    const festivalsInJanuary = filterByMoisDebut(festivalsData, '01 (January)');
+    console.log('Festivals starting in January:', festivalsInJanuary);
 
-    // Filtrer les festivals par mots-clés
-    const festivalsWithKeywords = filterByKeyWords(festivalsData, ['musique', 'festival']);
-    console.log('Festivals correspondant aux mots-clés :', festivalsWithKeywords);
+    // Filter festivals by keywords
+    const festivalsWithKeywords = filterByKeyWords(festivalsData, ['music', 'festival']);
+    console.log('Festivals matching keywords:', festivalsWithKeywords);
 
-    // Filtrer les festivals par périodicité
-    const festivalsWithPeriodicite = filterByPeriodicite(festivalsData, 'Annuelle');
-    console.log('Festivals avec périodicité annuelle :', festivalsWithPeriodicite);
+    // Filter festivals by periodicity
+    const festivalsWithPeriodicite = filterByPeriodicite(festivalsData, 'Annual');
+    console.log('Festivals with annual periodicity:', festivalsWithPeriodicite);
   })
   .catch((error) => {
-    console.error('Erreur lors de l\'utilisation de la bibliothèque', error);
+    console.error('Error while using the library:', error);
   });
 
 ```
