@@ -10,10 +10,11 @@ npm install librairiefestivalsfrancais
 ```
 
 ## Usage
-Once installed, you can import the library's functions into your code. Here is an example of how to use the different available functions:
+Once installed, you can import the library's functions into your code. It is recommend to create a .mjs file that will serve as an entry point to import the library data and pass it to the rest of your application. Here is an example of how to use the different available functions:
 
 ```
-const {
+//yourfile.mjs
+import {
     fetchFestivalsData,
     filterByRegion,
     filterByDomain,
@@ -21,7 +22,7 @@ const {
     filterByMoisDebut,
     filterByKeyWords,
     filterByPeriodicite
-  } = require('librairiefestivalsfrancais');
+  } from 'librairiefestivalsfrancais';
   
 // Retrieve data for all festivals
 fetchFestivalsData()
@@ -41,7 +42,7 @@ fetchFestivalsData()
     console.log('Festivals in Côte-d\'Or department:', festivalsInDepartement);
 
     // Filter festivals by start month
-    const festivalsInJanuary = filterByMoisDebut(festivalsData, '01 (January)');
+    const festivalsInJanuary = filterByMoisDebut(festivalsData, '01 (Janvier)');
     console.log('Festivals starting in January:', festivalsInJanuary);
 
     // Filter festivals by keywords
