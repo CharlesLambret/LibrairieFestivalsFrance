@@ -26,9 +26,6 @@ jobs:
       - name: Run tests
         run: npm test
 
-      - name: Run node 
-        run: node festivals.js
-        
       - name: Publish to NPM
         run: npm publish
         env:

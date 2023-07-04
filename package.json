@@ -1,8 +1,8 @@
 {
   "name": "apifestivalsfrancais",
   "version": "1.0.0",
-  "description": "Mini librairie permettant d'appeler et de filtrer les festivals en fonction de plusieurs paramètres ",
-  "main": "index.js",
+  "description": "Mini librairie permettant d'appeler et de filtrer les festivals en fonction de plusieurs paramètres (région, domaine, département, mois de début, mots clés)  ",
+  "main": "festivals.js",
   "scripts": {
     "test": "jest"
   },
