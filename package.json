@@ -5,7 +5,7 @@
   "main": "festivals.js",
   "scripts": {
     "test": "jest",
-    "build": "babel festivals.js events.js -d dist"
+    "build": "babel festivals.js -d dist"
   },
   "repository": {
     "type": "git",
