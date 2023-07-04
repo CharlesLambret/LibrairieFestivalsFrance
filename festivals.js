@@ -26,21 +26,16 @@ export async function fetchFestivalsData() {
     return festivalsData.records.filter((festival) => festival.fields.mois_habituel_de_debut.includes(mois));
   }
   
-  export function filterByKeyWords(festivalsData, motsCles) {
+  export function filterByKeyWords(festivalsData, keywords) {
     return festivalsData.records.filter((festival) => {
-      
-      const nomManifestation = festival.fields.nom_de_la_manifestation.toLowerCase();
-      const descriptionManifestation = festival.fields.commentaires ? festival.fields.commentaires.toLowerCase() : '';
-  
-      for (const motCle of motsCles) {
-        if (nomManifestation.includes(motCle.toLowerCase()) || descriptionManifestation.includes(motCle.toLowerCase())) {
-          return true;
-        }
-      }
-  
-      return false;
+      const festivalName = festival.fields.nom_de_la_manifestation.toLowerCase();
+      const festivalComments = festival.fields.commentaires.toLowerCase();
+      return keywords.every((keyword) => {
+        return festivalName.includes(keyword.toLowerCase()) || festivalComments.includes(keyword.toLowerCase());
+      });
     });
   }
+  
   
   export function filterByPeriodicite(festivalsData, periodicite) {
     return festivalsData.records.filter((festival) => festival.fields.periodicite === periodicite);
