@@ -6,7 +6,7 @@ La bibliothèque Panorama des Festivals est un ensemble de fonctions permettant 
 Pour utiliser cette bibliothèque dans votre projet, vous pouvez l'installer via npm en exécutant la commande suivante :
 
 ```
-npm install 
+npm install librairiefestivalsfrancais
 ```
 
 ## Utilisation
